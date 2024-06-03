@@ -1,0 +1,32 @@
+--Getting single column from Employee_Details table
+SELECT Package
+FROM Employee_Details;
+
+--RETRIVEING TWO COLUMNS FROM EMPLOYEE_DETAILS TABLE
+SELECT name,gender
+FROM Employee_Details;
+
+--RETIEVING EMP_id,NAME OF TEAM LEADERS
+SELECT T.EMP_ID,NAME
+FROM Team_Leaders AS T,Employee_Details AS E
+WHERE T.Emp_ID=E.EMP_ID;
+
+--RETRIEVING ALL COLUMNS OF EMPLOPYEE_DETAILS TABLE
+SELECT * FROM Employee_Details;
+
+--RETRIEVING ALL COLUMNS OF TEAM_LEADERS TABLE
+SELECT * FROM Team_Leaders;
+
+SELECT * 
+FROM Employee_Details
+WHERE DateOfBirth>'1985-01-01'
+ORDER BY DateOfBirth DESC;
+
+SELECT Package,COUNT(*)
+FROM Employee_Details
+GROUP BY Package;
+
+SELECT Gender,COUNT(*)
+FROM Employee_Details
+WHERE DateOfBirth BETWEEN '1990-01-01' AND GETDATE()
+GROUP BY Gender;
