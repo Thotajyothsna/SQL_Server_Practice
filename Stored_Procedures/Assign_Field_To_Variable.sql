@@ -1,0 +1,8 @@
+--aSSINGING aLL THE VALUES OF NAME FIELD FROM EMPLOYEE_DETAILS TABLE
+DECLARE @AllEmpNames VARCHAR(MAX);
+SET @AllEmpNames='';
+
+SELECT @AllEmpNames=@AllEmpNames+NAME+CHAR(10)
+FROM Employee_Details;
+
+PRINT @AllEmpNames;
