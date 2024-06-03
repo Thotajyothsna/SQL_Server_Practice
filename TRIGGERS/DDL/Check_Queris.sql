@@ -1,0 +1,26 @@
+create table testing
+(id int,
+name varchar(30),
+city varchar(50));
+
+SELECT * FROM DDLEVENTLOG;
+
+ALTER TABLE orders
+ADD STATUS VARCHAR(30);
+
+SELECT *
+FROM INFORMATION_SCHEMA.TABLES
+WHERE TABLE_NAME = 'DDLEventLog';
+
+SELECT *
+FROM SQLSERVERPRACTICE.dbo.DDLEventLog;
+
+USE employeepayroll;
+
+SELECT * FROM details;
+
+DROP TABLE DETAILS;
+
+CREATE TABLE TGR_TEST
+(ROLL_NO INT,
+NAME VARCHAR(30));

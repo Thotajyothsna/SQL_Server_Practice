@@ -1,0 +1,12 @@
+--
+UPDATE Employee_Details
+SET ADDRESS='DELHI'
+WHERE Package>800000;
+
+UPDATE Employee_Details
+SET DateOfBirth='2000-09-01' 
+WHERE EMP_ID=94;
+
+SELECT * FROM Employee_Details;
+
+SELECT * FROM TRIGGER_TABLE_UPDATE;

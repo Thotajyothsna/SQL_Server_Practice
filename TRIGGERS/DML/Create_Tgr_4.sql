@@ -1,0 +1,16 @@
+--Creating trigger which takes action(It collects the records into EMP_TRIGGER_TABLE)
+--) when some deletion occurs on employee_details
+
+ALTER TRIGGER DML_TRIGGER_AFTER_DEL
+ON EMPLOYEE_DETAILS
+AFTER DELETE
+AS
+BEGIN
+DECLARE @EMP_ID INT,
+		@NAME VARCHAR(25),
+		@EMAIL VARCHAR(35);
+
+
+INSERT INTO EMP_TRIGGER_TABLE(EMP_ID,NAME,EMAIL)
+SELECT EMP_ID,NAME,EMAIL FROM DELETED I;
+END
